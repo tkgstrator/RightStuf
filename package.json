@@ -1,0 +1,15 @@
+{
+  "name": "rightstuf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "tkgstrator <nasawake.am@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs"
+  },
+  "devDependencies": {
+    "sass": "^1.39.0",
+    "vitepress": "^0.16.1"
+  }
+}
