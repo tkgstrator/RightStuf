@@ -110,5 +110,5 @@ if __name__ == "__main__":
         for row in csv.DictReader(f):
             csvfile.append(row)
         # JSON書き込み
-        with open(dt.strftime(dt.now(), "json/%Y%m%d.json"), mode="w") as w:
+        with open(dt.strftime(dt.now(), "json/%Y%m%d%H%M%S.json"), mode="w") as w:
             json.dump(csvfile, w, indent=4, sort_keys=True)
