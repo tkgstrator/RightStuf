@@ -1,58 +1,4 @@
-# 北米版BD販売予定リスト(2021/09/07)
-
-## 2021/09/14
-
-### [Magical Girl Site Blu-ray](https://www.rightstufanime.com/Magical-Girl-Site-Blu-ray)
-
-![](https://www.rightstufanime.com/images/productImages/816726025940_magical-girl-site-blu-ray-primary.jpg)
-
-| 製品情報 | 内容 |
-| :------: | :--: |
-| 言語     | Japanese |
-| 字幕     | English |
-| 収録時間 | 300mins |
-| 放送年   | 2018 |
-| 販売元   | SENTAI FILMWORKS |
-| 価格     | $38.99 |
-
-### [Girls und Panzer das Finale Part 1 Blu-ray](https://www.rightstufanime.com/Girls-und-Panzer-das-Finale-Part-1-Blu-ray)
-
-![](https://www.rightstufanime.com/images/productImages/816726025643_anime-girls-und-panzer-das-finale-part-1-blu-ray-primary.jpg)
-
-| 製品情報 | 内容 |
-| :------: | :--: |
-| 言語     | English, Japanese |
-| 字幕     | English |
-| 収録時間 | 48mins |
-| 放送年   | 2017 |
-| 販売元   | SENTAI FILMWORKS |
-| 価格     | $12.99 |
-
-### [Black Clover Season 3 Part 5 Blu-ray/DVD](https://www.rightstufanime.com/Black-Clover-Season-3-Part-5-Blu-ray-DVD)
-
-![](https://www.rightstufanime.com/images/productImages/704400103322_anime-black-clover-season-3-part-5-blu-ray-dvd-primary.jpg)
-
-| 製品情報 | 内容 |
-| :------: | :--: |
-| 言語     | English, Japanese |
-| 字幕     | English |
-| 収録時間 | 300mins |
-| 放送年   | 2020 |
-| 販売元   | FUNIMATION |
-| 価格     | $41.24 |
-
-### [Black Clover Season 3 Part 5 Blu-ray/DVD + Artbook](https://www.rightstufanime.com/Black-Clover-Season-3-Part-5-Blu-ray-DVD-Artbook)
-
-![](https://www.rightstufanime.com/images/productImages/704400103339_anime-black-clover-season-3-part-5-blu-ray-dvd-artbook-primary.jpg)
-
-| 製品情報 | 内容 |
-| :------: | :--: |
-| 言語     | English, Japanese |
-| 字幕     | English |
-| 収録時間 | 300mins |
-| 放送年   | 2020 |
-| 販売元   | FUNIMATION |
-| 価格     | $52.49 |
+# 北米版BD販売予定リスト(2021/09/15)
 
 ## 2021/09/21
 
@@ -110,6 +56,32 @@
 
 ## 2021/09/28
 
+### [Transformers The Movie 35th Anniversary Edition Blu-ray/DVD](https://www.rightstufanime.com/Transformers-The-Movie-35th-Anniversary-Edition-Blu-ray-DVD)
+
+![](https://www.rightstufanime.com/images/productImages/826663219562_anime-transformers-movie-35th-anniversary-edition-blu-ray-dvd-primary.jpg)
+
+| 製品情報 | 内容 |
+| :------: | :--: |
+| 言語     | English |
+| 字幕     | English, Spanish |
+| 収録時間 | 85mins |
+| 放送年   | 1986 |
+| 販売元   | SHOUT FACTORY |
+| 価格     | $13.58 |
+
+### [Transformers The Movie 35th Anniversary Edition 4K HDR/2K Blu-ray](https://www.rightstufanime.com/Transformers-The-Movie-35th-Anniversary-Edition-4K-HDR-2K-Blu-ray)
+
+![](https://www.rightstufanime.com/images/productImages/826663219579_anime-transformers-movie-35th-anniversary-edition-4k-hdr-2k-blu-ray-primary.jpg)
+
+| 製品情報 | 内容 |
+| :------: | :--: |
+| 言語     | English |
+| 字幕     | English, Spanish |
+| 収録時間 | 85mins |
+| 放送年   | 1986 |
+| 販売元   | SHOUT FACTORY |
+| 価格     | $21.58 |
+
 ### [To Love Ru Darkness 2 Blu-ray](https://www.rightstufanime.com/To-Love-Ru-Darkness-2-Blu-ray-2021)
 
 ![](https://www.rightstufanime.com/images/productImages/816726023946_anime-to-love-ru-darkness-2-blu-ray-primary.jpg)
@@ -137,6 +109,19 @@
 | 価格     | $52.49 |
 
 ## 2021/10/05
+
+### [Little Vampire Blu-ray/DVD](https://www.rightstufanime.com/Little-Vampire-Blu-ray-DVD)
+
+![](https://www.rightstufanime.com/images/productImages/826663219906_anime-little-vampire-blu-ray-dvd-primary.jpg)
+
+| 製品情報 | 内容 |
+| :------: | :--: |
+| 言語     | English, French |
+| 字幕     | English |
+| 収録時間 | 85mins |
+| 放送年   | 2020 |
+| 販売元   | SHOUT FACTORY |
+| 価格     | $18.99 |
 
 ### [Nakaimo My Little Sister is Among Them! Blu-ray](https://www.rightstufanime.com/Nakaimo-My-Little-Sister-is-Among-Them-Blu-ray)
 
@@ -273,6 +258,19 @@
 | 価格     | $22.49 |
 
 ## 2021/10/26
+
+### [Shirobako The Movie Blu-ray/DVD](https://www.rightstufanime.com/Shirobako-The-Movie-Blu-ray-DVD)
+
+![](https://www.rightstufanime.com/images/productImages/826663219432_anime-shirobako-the-movie-blu-ray-dvd-primary.jpg)
+
+| 製品情報 | 内容 |
+| :------: | :--: |
+| 言語     | Japanese |
+| 字幕     | English |
+| 収録時間 | 119mins |
+| 放送年   | 2020 |
+| 販売元   | SHOUT FACTORY |
+| 価格     | $21.99 |
 
 ### [Venus Wars Blu-ray](https://www.rightstufanime.com/Venus-Wars-Blu-ray-10-2021)
 

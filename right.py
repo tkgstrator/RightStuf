@@ -1,13 +1,40 @@
 import os
 import re
+from statistics import mode
 import sys
 import csv
 import json
 import requests
 import urllib3
-import datetime
+from datetime import datetime as dt
 from urllib3.exceptions import InsecureRequestWarning
 urllib3.disable_warnings(InsecureRequestWarning)
+
+
+class Product():
+    title = None
+    productId = None
+    price = None
+    release = None
+    spokenLanguages = None
+    subtitleLanguages = None
+    productImageURL = None
+    publisher = None
+    created = None
+    runtime = None
+
+    def __init__(self, json):
+        self.title = json["Title"]
+        self.productId = json["ProductId"]
+        self.release = json["Release"]
+        self.price = json["Price"]
+        self.stock = json["In stock"]
+        self.spokenLanguages = [x.replace("'", "").replace("[", "").replace("]", "").strip() for x in json["Spoken Languages"].split(",")]
+        self.subtitleLanguages = [x.replace("'", "").replace("[", "").replace("]", "").strip() for x in json["SubTitle Languages"].split(",")]
+        self.productImageURL = json["ImageURL"]
+        self.publisher = json["Publisher"]
+        self.created = json["Created"]
+        self.runtime = json["Runtime"]
 
 
 def getProductsData(limit, offset):
@@ -21,7 +48,7 @@ def getProductsData(limit, offset):
         "custitem_rs_web_class": "Blu-ray",
         "language": "en",
         "fieldset": "details",
-        "custitem_rs_publisher": "NIS-AMERICA,ANIPLEX-OF-AMERICA,FUNIMATION,SENTAI-FILMWORKS",
+        "custitem_rs_publisher": "NIS-AMERICA,ANIPLEX-OF-AMERICA,FUNIMATION,SENTAI-FILMWORKS,SHOUT-FACTORY",
         "limit": limit,
         "offset": offset
     }
@@ -40,9 +67,11 @@ def saveProductImage(iURL, saveDir):
 
 
 if __name__ == "__main__":
+    # CSVとして保存
     with open("product.csv", mode="w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["Title", "ProductId", "Release", "Price", "In stock", "Publisher", "Created", "Runtime", "Spoken Languages", "SubTitle Languages", "ImageURL"])
+        w.writerow(["Title", "ProductId", "Release", "Price", "In stock", "Publisher",
+                   "Created", "Runtime", "Spoken Languages", "SubTitle Languages", "ImageURL"])
         res = getProductsData(0, 0)
         if res.status_code == 200:
             size = int(json.loads(res.text)["total"] / 100) + 1
@@ -52,7 +81,7 @@ if __name__ == "__main__":
                 for item in items:
                     name = item["displayname"]
                     productId = item["urlcomponent"]
-                    date = datetime.datetime.strptime(item["custitem_rs_release_date"], "%m/%d/%Y").strftime("%Y/%m/%d")
+                    date = dt.strptime(item["custitem_rs_release_date"], "%m/%d/%Y").strftime("%Y/%m/%d")
                     spokenLanguages = [x.replace("'", "").strip() for x in item["custitem_rs_spoken_language"].split(",")]
                     subtitleLanguages = [x.replace("'", "").strip() for x in item["custitem_rs_subtitle_language"].split(",")]
                     publisher = item["custitem_rs_publisher"]
@@ -72,10 +101,14 @@ if __name__ == "__main__":
                         primaryImageURL = primaryImageURLs[0]
                     else:
                         primaryImageURL = ""
-                    # print("Getting " + name + " information.")
-                    w.writerow([name, productId, date, price, stock, publisher, created, runtime, spokenLanguages, subtitleLanguages, primaryImageURL])
+                    w.writerow([name, productId, date, price, stock, publisher, created,
+                               runtime, spokenLanguages, subtitleLanguages, primaryImageURL])
 
-                # image = json.dumps(item["itemimages_detail"])
-                # count = re.findall(r"https://.[^}]*primary.jpg", image)
-                # for iURL in count:
-                #     saveProductImage(iURL, "weekly")
+    # CSVをJSONとして保存
+    with open("product.csv", mode="r") as f:
+        csvfile = []
+        for row in csv.DictReader(f):
+            csvfile.append(row)
+        # JSON書き込み
+        with open(dt.strftime(dt.now(), "json/%Y%m%d.json"), mode="w") as w:
+            json.dump(csvfile, w, indent=4, sort_keys=True)
