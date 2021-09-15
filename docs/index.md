@@ -47,7 +47,7 @@ export default {
                     field: "publisher"
                 }
             ],
-            products: products.sort((x, y) => new Date(y.Release) - new Date(x.Release)),
+            products: [],
             currentTime: new Date().toLocaleDateString()
         }
     },
@@ -58,7 +58,7 @@ export default {
         fetch(filePath)
             .then(r => r.json())
             .then(json => {
-                this.products = json
+                this.products = json.sort((x, y) => new Date(y.Release) - new Date(x.Release))
             },
             response => {
                 console.log("Error")
