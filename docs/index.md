@@ -5,7 +5,7 @@ sidebar: false
 <div id="app" class="container">
     <h1>北米版BD販売予定リスト</h1>
     <p>最終更新日時 {{ currentTime }}</p>
-    <!-- <table class="table">
+    <table class="table">
         <thead>
             <tr>
                 <th v-for="column in columns" :class="column.field" :key="column.title">
@@ -21,7 +21,7 @@ sidebar: false
                 <td class="publisher">{{ product.Publisher }}</td>
             </tr>
         </tbody>
-    </table> -->
+    </table>
 </div>
 
 <script>
@@ -53,8 +53,7 @@ export default {
     },
     mounted() {
         const date = new Date()
-        const filePath = `/public/json/${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, "0")}${(date.getDate() + 1).toString().padStart(2, "0")}.json`
-        console.log(filePath)
+        const filePath = `/json/${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, "0")}${(date.getDate()).toString().padStart(2, "0")}.json`
         fetch(filePath)
             .then(r => r.json())
             .then(json => {
