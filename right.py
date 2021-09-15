@@ -81,7 +81,7 @@ if __name__ == "__main__":
                 for item in items:
                     name = item["displayname"]
                     productId = item["urlcomponent"]
-                    date = dt.strptime(item["custitem_rs_release_date"], "%m/%d/%Y").strftime("%Y/%m/%d")
+                    date = dt.strptime(item["custitem_rs_release_date"], "%m/%d/%Y").strftime("%Y-%m-%d")
                     spokenLanguages = [x.replace("'", "").strip() for x in item["custitem_rs_spoken_language"].split(",")]
                     subtitleLanguages = [x.replace("'", "").strip() for x in item["custitem_rs_subtitle_language"].split(",")]
                     publisher = item["custitem_rs_publisher"]
@@ -110,5 +110,5 @@ if __name__ == "__main__":
         for row in csv.DictReader(f):
             csvfile.append(row)
         # JSON書き込み
-        with open(dt.strftime(dt.now(), "json/%Y%m%d%H%M.json"), mode="w") as w:
+        with open(dt.strftime(dt.now(), "docs/public/json/%Y%m%d%H%M.json"), mode="w") as w:
             json.dump(csvfile, w, indent=4, sort_keys=True)

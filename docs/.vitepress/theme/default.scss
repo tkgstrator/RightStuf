@@ -4,12 +4,25 @@ img {
 }
 
 table {
-  width: 80%;
-  max-width: 400px;
+  // width: 100%;
   display: table;
-  border-collapse: collapse;
 }
 
 thead {
   display: table-header-group;
+}
+
+a {
+  color: blue;
+}
+
+td.release,
+td.publisher {
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .publisher {
+    display: none;
+  }
 }
