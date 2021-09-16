@@ -1,5 +1,7 @@
 # 北米版 BD 販売予定リスト
 
+> 最終更新日時 {{ currentTime }}
+
 ここは RightStuf で販売または販売が予定されている NIS AMERICA, ANIPLEX OF AMERICA, FUNIMATION, SENTAI FILMWORKS, SHOUT FACTORY の製品の一覧を紹介するページです。
 
 日本の深夜アニメ枠の作品は概ねこの四社からリリースされることが多いですが、まれに別会社からリリースされることもあります。
@@ -188,7 +190,8 @@ export default {
     },
     mounted() {
         const date = new Date()
-        const filePath = `/json/${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, "0")}${(date.getDate()).toString().padStart(2, "0")}.json`
+        const currentTime = `${date.getUTCFullYear()}${(date.getUTCMonth() + 1).toString().padStart(2, "0")}${(date.getUTCDate()).toString().padStart(2, "0")}`
+        const filePath = `/json/${currentTime}.json`
         fetch(filePath)
             .then(r => r.json())
             .then(json => {
