@@ -146,7 +146,7 @@ def saveCSV(fileName):
 if __name__ == "__main__":
 
     # 日付からCSVファイルの名前を決める
-    fileName = dt.strftime(dt.now(), "%Y%m%d")
+    fileName = dt.strftime(dt.utcnow(), "%Y%m%d")
 
     # CSVファイルを保存
     saveCSV(fileName)
