@@ -1,6 +1,9 @@
 name: Scheduled build
 
 on:
+  push:
+    branches:
+      - master
   schedule:
     - cron: "30 15 * * *"
 
