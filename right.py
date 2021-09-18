@@ -147,7 +147,7 @@ if __name__ == "__main__":
 
     # 日付からCSVファイルの名前を決める
     fileName = dt.strftime(dt.utcnow(), "%Y%m%d")
-
+    print("Output FileName:", fileName)
     # CSVファイルを保存
     saveCSV(fileName)
     # CSVをJSONとして保存
