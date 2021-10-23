@@ -34,5 +34,6 @@ jobs:
           git config --local user.name "tkgstrator"
           git add .
           git commit -m "Update product information"
+          git config pull.rebase false
           git pull
           git push origin master
