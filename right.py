@@ -108,11 +108,14 @@ def getAllProductsData():
         # 総数を取得
         res = getProductsData(0, 0, promotion, orderType)
         if res.status_code == 200:
-            size = int(json.loads(res.text)["total"] / 100) + 1
-            for offset in range(0, size):
-                res = getProductsData(100, offset*100, promotion, orderType)
-                # 商品一覧を取得
-                items.extend(map(lambda x: Product(x, promotion, orderType), json.loads(res.text)["items"]))
+            try:
+                size = int(json.loads(res.text)["total"] / 100) + 1
+                for offset in range(0, size):
+                    res = getProductsData(100, offset*100, promotion, orderType)
+                    # 商品一覧を取得
+                    items.extend(map(lambda x: Product(x, promotion, orderType), json.loads(res.text)["items"]))
+            except KeyError:
+                print("KeyError")
     return items
 
 
@@ -133,7 +136,7 @@ def saveCSV(fileName):
         "Created", "Runtime", "Spoken Languages", "SubTitle Languages", "ImageURL",
         "Promotion", "OrderType"
     ]
-    with open(f"docs/public/csv/{fileName}.csv", mode="w") as f:
+    with open(f"{fileName}.csv", mode="w") as f:
         # CSVWriterの設定
         w = csv.writer(f)
         w.writerow(headers)
@@ -151,10 +154,10 @@ if __name__ == "__main__":
     # CSVファイルを保存
     saveCSV(fileName)
     # CSVをJSONとして保存
-    with open(f"docs/public/csv/{fileName}.csv", mode="r") as f:
+    with open(f"{fileName}.csv", mode="r") as f:
         csvfile = []
         for row in csv.DictReader(f):
             csvfile.append(row)
         # JSON書き込み
-        with open(f"docs/public/json/{fileName}.json", mode="w") as w:
+        with open(f"json/{fileName}.json", mode="w") as w:
             json.dump(csvfile, w, indent=4, sort_keys=True)
