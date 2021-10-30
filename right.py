@@ -136,7 +136,7 @@ def saveCSV(fileName):
         "Created", "Runtime", "Spoken Languages", "SubTitle Languages", "ImageURL",
         "Promotion", "OrderType"
     ]
-    with open(f"{fileName}.csv", mode="w") as f:
+    with open(f"docs/public/csv/{fileName}.csv", mode="w") as f:
         # CSVWriterの設定
         w = csv.writer(f)
         w.writerow(headers)
@@ -154,10 +154,10 @@ if __name__ == "__main__":
     # CSVファイルを保存
     saveCSV(fileName)
     # CSVをJSONとして保存
-    with open(f"{fileName}.csv", mode="r") as f:
+    with open(f"docs/public/csv/{fileName}.csv", mode="r") as f:
         csvfile = []
         for row in csv.DictReader(f):
             csvfile.append(row)
         # JSON書き込み
-        with open(f"json/{fileName}.json", mode="w") as w:
+        with open(f"docs/public/json/{fileName}.json", mode="w") as w:
             json.dump(csvfile, w, indent=4, sort_keys=True)
