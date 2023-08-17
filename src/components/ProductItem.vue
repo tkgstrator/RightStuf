@@ -14,10 +14,9 @@ defineProps({
 </script>
 
 <template>
-  <IonCard>
+  <IonCard color="light">
     <IonCardHeader>
       <IonImg :src="item.image_urls.slice(-1)[0]"></IonImg>
-      <!-- <img :src="item.image_urls.slice(-1)[0]" /> -->
       <IonCardTitle>{{ item.displayname.split('Blu-ray')[0] }}</IonCardTitle>
       <!-- <IonCardSubtitle>{{ item.displayname }}</IonCardSubtitle> -->
     </IonCardHeader>

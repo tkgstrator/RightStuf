@@ -1,30 +1,32 @@
+<script setup lang="ts">
+import { ContentType } from '@/dto/content';
+import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
+import { layersOutline, alertOutline, ribbonOutline, sparklesOutline } from 'ionicons/icons';
+
+function icon(type: ContentType): string {
+  switch (type) {
+    case ContentType.Products:
+      return layersOutline;
+    case ContentType.Sales:
+      return ribbonOutline;
+    case ContentType.NewRelease:
+      return alertOutline;
+    case ContentType.PreOrder:
+      return sparklesOutline;
+  }
+}
+</script>
+
 <template>
   <IonPage>
     <IonTabs>
       <IonRouterOutlet></IonRouterOutlet>
       <IonTabBar slot="bottom">
-        <IonTabButton tab="/all" href="/">
-          <IonIcon aria-hidden="true" :icon="triangle" />
-          <IonLabel>Products</IonLabel>
-        </IonTabButton>
-        <IonTabButton tab="/pre-order" href="/pre-order">
-          <IonIcon aria-hidden="true" :icon="triangle" />
-          <IonLabel>Pre order</IonLabel>
-        </IonTabButton>
-        <IonTabButton tab="/new-release" href="/new-release">
-          <IonIcon aria-hidden="true" :icon="triangle" />
-          <IonLabel>New release</IonLabel>
-        </IonTabButton>
-        <IonTabButton tab="/sales" href="/sales">
-          <IonIcon aria-hidden="true" :icon="triangle" />
-          <IonLabel>Sales</IonLabel>
+        <IonTabButton :tab="type" :href="type" v-for="type in Object.values(ContentType)">
+          <IonIcon aria-hidden="true" :icon="icon(type)" />
+          <IonLabel>{{ type }}</IonLabel>
         </IonTabButton>
       </IonTabBar>
     </IonTabs>
   </IonPage>
 </template>
-
-<script setup lang="ts">
-import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
-import { ellipse, square, triangle } from 'ionicons/icons';
-</script>

@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import NavigationView from '@/views/NavigationView.vue';
-
+import ProductsView from '@/views/ProductsView.vue';
+import { ContentType } from '@/dto/content';
 const routes: Array<RouteRecordRaw> = [
     // {
     //     path: '/',
@@ -10,36 +11,15 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
         component: NavigationView,
-        children: [
-            // {
-            //     path: '/',
-            //     redirect: '/pre-order',
-            // },
-            {
-                path: '/',
-                component: () => import('@/views/HomeView.vue'),
-            },
-            {
-                path: 'pre-order',
-                component: () => import('@/views/PreorderView.vue'),
-            },
-            {
-                path: 'new-release',
-                component: () => import('@/views/NewReleaseView.vue'),
-            },
-            {
-                path: 'sales',
-                component: () => import('@/views/SalesView.vue'),
-            },
-            // {
-            //     path: 'tab2',
-            //     component: () => import('@/views/Tab2Page.vue'),
-            // },
-            // {
-            //     path: 'tab3',
-            //     component: () => import('@/views/Tab3Page.vue'),
-            // },
-        ],
+        children: Object.values(ContentType).map((type) => {
+            return {
+                path: type,
+                component: ProductsView,
+                props: {
+                    content: type,
+                },
+            };
+        })
     },
 ];
 
