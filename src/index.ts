@@ -1,8 +1,10 @@
-import axios from 'axios';
-import { plainToClass, plainToInstance } from 'class-transformer';
-import { Item, ItemRequest } from './dto/right.dto';
 import fs from 'fs';
+
+import axios from 'axios';
+import { plainToInstance } from 'class-transformer';
 import dayjs from 'dayjs';
+
+import { Item, ItemRequest } from './dto/right.dto';
 
 enum Promotion {
     ThreeDaySale = 'Three-Day-Sale',
@@ -13,11 +15,6 @@ enum Promotion {
 enum OrderType {
     NewRelease = 'New-Release',
     PreOrder = 'Pre-order',
-}
-
-interface Reuqest {
-    promotion: Promotion | null;
-    order_type: OrderType | null;
 }
 
 export class Client {
@@ -45,8 +42,8 @@ export class Client {
             country: 'US',
             currency: 'USD',
             custitem_rs_web_class: 'Blu-ray',
-            language: 'en',
             fieldset: 'details',
+            language: 'en',
             limit: limit.toString(),
             offset: offset.toString(),
         });
@@ -72,30 +69,30 @@ const requests = [
         name: "sales",
         requests:
             [
-                { promotion: Promotion.ThreeDaySale, order_type: null },
-                { promotion: Promotion.WeeklySpecials, order_type: null },
-                { promotion: Promotion.DailyDeals, order_type: null },
+                { order_type: null, promotion: Promotion.ThreeDaySale },
+                { order_type: null, promotion: Promotion.WeeklySpecials },
+                { order_type: null, promotion: Promotion.DailyDeals },
             ]
     },
     {
         name: "new-release",
         requests:
             [
-                { promotion: null, order_type: OrderType.NewRelease },
+                { order_type: OrderType.NewRelease, promotion: null },
             ]
     },
     {
         name: "pre-order",
         requests:
             [
-                { promotion: null, order_type: OrderType.PreOrder },
+                { order_type: OrderType.PreOrder, promotion: null },
             ]
     },
     {
         name: "products",
         requests:
             [
-                { promotion: null, order_type: null },
+                { order_type: null, promotion: null },
             ]
     },
 ];
