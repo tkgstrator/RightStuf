@@ -29,6 +29,7 @@
     "node-fetch": "^3.3.2",
     "prettier": "^3.0.2",
     "reflect-metadata": "^0.1.13",
+    "terser": "^5.19.2",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },

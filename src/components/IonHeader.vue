@@ -3,14 +3,15 @@ import { IonCol, IonGrid, IonHeader, IonRow, IonSearchbar, IonSelect, IonSelectO
 import { Ref, ref } from 'vue';
 
 defineProps({
-  search: {
+  modelValue: {
     type: String,
     required: true
   }
 })
 
+const emit = defineEmits(['update:modelValue'])
 function handleInput(event: CustomEvent) {
-  // search.value = event.detail.value;
+  emit('update:modelValue', event.detail.value)
 }
 </script>
 
