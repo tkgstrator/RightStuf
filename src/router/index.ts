@@ -1,25 +1,26 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
+
+import { ContentType } from '@/dto/content';
 import NavigationView from '@/views/NavigationView.vue';
 import ProductsView from '@/views/ProductsView.vue';
-import { ContentType } from '@/dto/content';
 const routes: Array<RouteRecordRaw> = [
     // {
     //     path: '/',
     //     // redirect: '/',
     // },
     {
-        path: '/',
-        component: NavigationView,
         children: Object.values(ContentType).map((type) => {
             return {
-                path: type,
                 component: ProductsView,
+                path: type,
                 props: {
                     content: type,
                 },
             };
-        })
+        }),
+        component: NavigationView,
+        path: '/'
     },
 ];
 

@@ -1,8 +1,9 @@
+import { IonicVue } from '@ionic/vue';
 import { createApp } from 'vue';
+
 import App from './App.vue';
 import router from './router';
 
-import { IonicVue } from '@ionic/vue';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css';
@@ -24,9 +25,9 @@ import '@ionic/vue/css/display.css';
 import './theme/variables.css';
 
 const app = createApp(App).use(IonicVue, {
-    rippleEffect: true,
-    mode: 'md',
     animated: true,
+    mode: 'md',
+    rippleEffect: true,
     statusTap: true,
     swipeBackEnabled: true,
 }).use(router);
