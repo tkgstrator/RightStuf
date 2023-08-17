@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.autoSave": "onFocusChange",
+		"editor.fontFamily": "MeiryoKe_Console",
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true,
+		"editor.formatOnType": true,
+		"editor.defaultFormatter": "Vue.volar",
+		"editor.tabSize": 2
+	},
+	"extensions": {
+		"recommendations": [
+			"esbenp.prettier-vscode",
+			"vue.vscode-typescript-vue-plugin"
+		]
+	}
+}

@@ -1,0 +1,43 @@
+root: true
+env:
+  node: true
+  es6: true
+parser: "@typescript-eslint/parser"
+parserOptions:
+  ecmaVersion: 2020
+  project: ./tsconfig.json
+  sourceType: module
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/recommended
+  - prettier
+  - plugin:vue/vue3-essential
+  - '@vue/typescript/recommended'
+plugins:
+  - import
+  - sort-keys-fix
+  - typescript-sort-keys
+  - unused-imports
+rules:
+  import/order:
+    - error
+    - groups:
+        - builtin
+        - external
+        - internal
+        - parent
+        - sibling
+        - index
+        - object
+        - type
+      newlines-between: always
+      alphabetize:
+        order: asc
+  import/no-duplicates: error
+  sort-keys-fix/sort-keys-fix: error
+  typescript-sort-keys/interface: error
+  unused-imports/no-unused-imports: error
+  no-console: process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+  no-debugger: process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+  vue/no-deprecated-slot-attribute: 'off',
+  '@typescript-eslint/no-explicit-any': 'off',
