@@ -34,16 +34,16 @@ jobs:
         run: npm install
 
       - name: Format
-        run: npm format
+        run: npm run format
       
       - name: Lint
-        run: npm lint
+        run: npm run lint
 
       - name: Retrieve Product Information
-        run: npm generate 
+        run: npm run generate 
       
       - name: Build
-        run: npm build
+        run: npm run build
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
