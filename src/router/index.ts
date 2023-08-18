@@ -20,7 +20,7 @@ const routes: Array<RouteRecordRaw> = [
             };
         }),
         component: NavigationView,
-        path: '/'
+        path: '/',
     },
 ];
 

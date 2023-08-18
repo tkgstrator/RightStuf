@@ -66,43 +66,35 @@ export class Client {
 const client: Client = new Client();
 const requests = [
     {
-        name: "sales",
-        requests:
-            [
-                { order_type: null, promotion: Promotion.ThreeDaySale },
-                { order_type: null, promotion: Promotion.WeeklySpecials },
-                { order_type: null, promotion: Promotion.DailyDeals },
-            ]
+        name: 'sales',
+        requests: [
+            { order_type: null, promotion: Promotion.ThreeDaySale },
+            { order_type: null, promotion: Promotion.WeeklySpecials },
+            { order_type: null, promotion: Promotion.DailyDeals },
+        ],
     },
     {
-        name: "new-release",
-        requests:
-            [
-                { order_type: OrderType.NewRelease, promotion: null },
-            ]
+        name: 'new-release',
+        requests: [{ order_type: OrderType.NewRelease, promotion: null }],
     },
     {
-        name: "pre-order",
-        requests:
-            [
-                { order_type: OrderType.PreOrder, promotion: null },
-            ]
+        name: 'pre-order',
+        requests: [{ order_type: OrderType.PreOrder, promotion: null }],
     },
     {
-        name: "products",
-        requests:
-            [
-                { order_type: null, promotion: null },
-            ]
+        name: 'products',
+        requests: [{ order_type: null, promotion: null }],
     },
 ];
 
 const current_date: string = dayjs().format('YYYYMMDD');
 fs.mkdirSync(`src/assets/${current_date}`, { recursive: true });
 requests.forEach(async (request) => {
-    const items: Item[] = (await Promise.all(request.requests.map((request) => client.get_all_products(request.promotion, request.order_type))))
+    const items: Item[] = (
+        await Promise.all(request.requests.map((request) => client.get_all_products(request.promotion, request.order_type)))
+    )
         .flat()
-        .sort((a, b) => dayjs(b.release_date).unix() - dayjs(a.release_date).unix())
-    console.log(request.name, items.length)
+        .sort((a, b) => dayjs(b.release_date).unix() - dayjs(a.release_date).unix());
+    console.log(request.name, items.length);
     fs.writeFileSync(`src/assets/${current_date}/${request.name}.json`, JSON.stringify(items, null, 2));
 });
