@@ -31,22 +31,36 @@ jobs:
 
       - name: Install Dependencies
         if: ${{ steps.cache_cdk_dependency_id.outputs.cache-hit != 'true' }}
-        run: yarn install
+        run: npm install
 
       - name: Format
-        run: yarn format
+        run: npm format
       
       - name: Lint
-        run: yarn lint
+        run: npm lint
 
       - name: Retrieve Product Information
-        run: yarn generate 
+        run: npm generate 
       
       - name: Build
-        run: yarn build
+        run: npm build
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
+          publish-dir: 'dist'
+          production-branch: dev
+          github-deployment-environment: ${{ steps.github_deployment_environment.outputs.GITHUB_DEPLOYMENT_ENVIRONMENT }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: ${{ github.event.head_commit.message || github.event.pull_request.title }}
+          alias: deploy-preview-${{ github.event.number }}
+          fails-without-credentials: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_DEV }}
+
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: dist
