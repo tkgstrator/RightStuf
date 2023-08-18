@@ -49,7 +49,7 @@ jobs:
         uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: 'dist'
-          production-branch: dev
+          production-branch: develop
           github-deployment-environment: ${{ steps.github_deployment_environment.outputs.GITHUB_DEPLOYMENT_ENVIRONMENT }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: ${{ github.event.head_commit.message || github.event.pull_request.title }}
@@ -57,7 +57,7 @@ jobs:
           fails-without-credentials: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_DEV }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_PRD }}
 
       # - name: Deploy
       #   uses: peaceiris/actions-gh-pages@v3
