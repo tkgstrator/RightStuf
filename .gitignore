@@ -30,3 +30,10 @@ npm-debug.log*
 /platforms
 /plugins
 /www
+
+.env
+.env.*
+!.env.example
+.secrets
+.secrets.*
+!.secrets.example
