@@ -5,10 +5,10 @@ import { ContentType } from '@/dto/content';
 import NavigationView from '@/views/NavigationView.vue';
 import ProductsView from '@/views/ProductsView.vue';
 const routes: Array<RouteRecordRaw> = [
-    // {
-    //     path: '/',
-    //     // redirect: '/',
-    // },
+    {
+        path: '/',
+        redirect: '/products',
+    },
     {
         children: Object.values(ContentType).map((type) => {
             return {
