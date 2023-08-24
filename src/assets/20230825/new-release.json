@@ -1,0 +1,132 @@
+[
+  {
+    "spoken_language": [
+      "English",
+      "Japanese"
+    ],
+    "subtitle_language": [
+      "English"
+    ],
+    "in_stock": true,
+    "internalid": 77071,
+    "release_date": "2023-08-21T15:00:00.000Z",
+    "itemid": 816546028848,
+    "year_created": 2022,
+    "pre_book_date": null,
+    "displayname": "Engage Kiss Blu-ray",
+    "is_purchasable": true,
+    "is_adult": false,
+    "availabe_for_purchase": false,
+    "prices": [
+      139.98,
+      111.98,
+      106.38,
+      111.98
+    ],
+    "online_price": 111.98,
+    "run_time": 312,
+    "publisher": "ANIPLEX OF AMERICA",
+    "image_urls": [
+      "https://www.rightstufanime.com/images/productImages/816546028848_anime-engage-kiss-blu-ray-alta.jpg",
+      "https://www.rightstufanime.com/images/productImages/816546028848_anime-engage-kiss-blu-ray-primary.jpg"
+    ]
+  },
+  {
+    "spoken_language": [
+      "English",
+      "Japanese"
+    ],
+    "subtitle_language": [
+      "English"
+    ],
+    "in_stock": true,
+    "internalid": 76642,
+    "release_date": "2023-08-21T15:00:00.000Z",
+    "itemid": 704400107276,
+    "year_created": 2022,
+    "pre_book_date": "2023-07-10T15:00:00.000Z",
+    "displayname": "Ranking of Kings Season 1 Part 2 Limited Edition Blu-ray",
+    "is_purchasable": true,
+    "is_adult": false,
+    "availabe_for_purchase": false,
+    "prices": [
+      89.98,
+      60.74,
+      58.49,
+      67.49
+    ],
+    "online_price": 67.49,
+    "run_time": 300,
+    "publisher": "FUNIMATION/CRUNCHYROLL",
+    "image_urls": [
+      "https://www.rightstufanime.com/images/productImages/704400107276_anime-ranking-of-kings-season-1-part-2-limited-edition-blu-ray-altb.jpg",
+      "https://www.rightstufanime.com/images/productImages/704400107276_anime-ranking-of-kings-season-1-part-2-limited-edition-blu-ray-alta.jpg",
+      "https://www.rightstufanime.com/images/productImages/704400107276_anime-ranking-of-kings-season-1-part-2-limited-edition-blu-ray-back.jpg",
+      "https://www.rightstufanime.com/images/productImages/704400107276_anime-ranking-of-kings-season-1-part-2-limited-edition-blu-ray-primary.jpg"
+    ]
+  },
+  {
+    "spoken_language": [
+      "English",
+      "Japanese"
+    ],
+    "subtitle_language": [
+      "English"
+    ],
+    "in_stock": true,
+    "internalid": 76640,
+    "release_date": "2023-08-21T15:00:00.000Z",
+    "itemid": 704400107269,
+    "year_created": 2022,
+    "pre_book_date": "2023-07-10T15:00:00.000Z",
+    "displayname": "Ranking of Kings Season 1 Part 2 Blu-ray/DVD",
+    "is_purchasable": true,
+    "is_adult": false,
+    "availabe_for_purchase": false,
+    "prices": [
+      69.98,
+      47.24,
+      45.49,
+      52.49
+    ],
+    "online_price": 52.49,
+    "run_time": 300,
+    "publisher": "FUNIMATION/CRUNCHYROLL",
+    "image_urls": [
+      "https://www.rightstufanime.com/images/productImages/704400107269_anime-ranking-of-kings-season-1-part-2-blu-ray-dvd-back.jpg",
+      "https://www.rightstufanime.com/images/productImages/704400107269_anime-ranking-of-kings-season-1-part-2-blu-ray-dvd-primary.jpg"
+    ]
+  },
+  {
+    "spoken_language": [
+      "English",
+      "Japanese"
+    ],
+    "subtitle_language": [
+      "English"
+    ],
+    "in_stock": false,
+    "internalid": 75799,
+    "release_date": "2023-08-21T15:00:00.000Z",
+    "itemid": 816726020266,
+    "year_created": 2022,
+    "pre_book_date": "2023-06-26T15:00:00.000Z",
+    "displayname": "Reincarnated as a Sword Blu-ray",
+    "is_purchasable": true,
+    "is_adult": false,
+    "availabe_for_purchase": false,
+    "prices": [
+      69.98,
+      47.24,
+      45.49,
+      52.49
+    ],
+    "online_price": 52.49,
+    "run_time": 300,
+    "publisher": "SENTAI FILMWORKS",
+    "image_urls": [
+      "https://www.rightstufanime.com/images/productImages/816726020266_anime-reincarnated-as-a-sword-blu-ray-back.jpg",
+      "https://www.rightstufanime.com/images/productImages/816726020266_anime-reincarnated-as-a-sword-blu-ray-primary.jpg"
+    ]
+  }
+]
