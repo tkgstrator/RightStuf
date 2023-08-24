@@ -1,4 +1,4 @@
-name: Scheduled build
+name: Production build 
 
 on:
   push:
